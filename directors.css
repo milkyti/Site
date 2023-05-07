@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: white;
+}
+
+header h4{
+    position: absolute;
+    left: 2.5%;
+    top: 2.5%;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    color: #212121;
+}
+
+.container{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 70px;
+}
+
+.container .card{
+    width: 100%;
+    background: white;
+
+}
+
+.container .card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+    filter: grayscale(1);
+}
+
+.container .card:hover .imgBx img{
+    transform: scale(1.2);
+}
+
+.container .card .content{
+    padding: 10px;
+}
+
+.container .card .content .name h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin: 5px 0;
+}
