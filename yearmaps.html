@@ -17,6 +17,10 @@
                 zoom: 10
             });
 
+            var url = new URL(window.location.href);
+            var searchParams = new URLSearchParams(url.search);
+            var varName1 = searchParams.get("varName");
+
             var y5060 = new ymaps.multiRouter.MultiRoute({
                 referencePoints: [
                     "Москва, площадь Тверская Застава, 7",
@@ -94,6 +98,23 @@
             }, {
                 boundsAutoApply: true
             });
+
+            switch (varName1) {
+                case "y5060":
+                    myMap.geoObjects.add(y5060);
+                    break;
+                case "y70":
+                    myMap.geoObjects.add(y70);
+                    break;
+                case "y8090":
+                    myMap.geoObjects.add(y8090);
+                    break;
+                case "y0020":
+                    myMap.geoObjects.add(y0020);
+                    break;
+
+                default:
+            } 
 
             //myMap.geoObjects.add(y5060);
             //myMap.geoObjects.add(y70);

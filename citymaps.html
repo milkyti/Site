@@ -14,8 +14,12 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map("map", {
                 center: [55.76, 37.64],
-                zoom: 10
+                zoom: 5
             });
+
+            var url = new URL(window.location.href);
+            var searchParams = new URLSearchParams(url.search);
+            var varName1 = searchParams.get("varName");
 
             var msc = new ymaps.multiRouter.MultiRoute({
                 referencePoints: [
@@ -66,6 +70,17 @@
             }, {
                 boundsAutoApply: true
             });
+
+            switch (varName1) {
+                case "msc":
+                    myMap.geoObjects.add(msc);
+                    break;
+                case "spb":
+                    myMap.geoObjects.add(spb);
+                    break;
+
+                default:
+            } 
 
             //myMap.geoObjects.add(msc);
             //myMap.geoObjects.add(spb);

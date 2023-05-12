@@ -14,8 +14,12 @@
         ymaps.ready(function () {
             var myMap = new ymaps.Map("map", {
                 center: [55.76, 37.64],
-                zoom: 10
+                zoom: 5
             });
+
+            var url = new URL(window.location.href);
+            var searchParams = new URLSearchParams(url.search);
+            var varName1 = searchParams.get("varName");
 
             var kalatozov = new ymaps.multiRouter.MultiRoute({
                 referencePoints: [
@@ -275,7 +279,63 @@
                 boundsAutoApply: true
             });
 
+            switch (varName1) {
+                case "kalatozov":
+                    myMap.geoObjects.add(kalatozov);
+                    break;
+                case "danelia":
+                    myMap.geoObjects.add(danelia);
+                    break;
+                case "zarhi":
+                    myMap.geoObjects.add(zarhi);
+                    break;
+                case "gaidai":
+                    myMap.geoObjects.add(gaidai);
+                    break;
+                case "ryazanov":
+                    myMap.geoObjects.add(ryazanov);
+                    break;
+                case "seryi":
+                    myMap.geoObjects.add(seryi);
+                    break;
+                case "menshov":
+                    myMap.geoObjects.add(menshov);
+                    break;
+                case "kozakov":
+                    myMap.geoObjects.add(kozakov);
+                    break;
+                case "shahnazarov":
+                    myMap.geoObjects.add(shahnazarov);
+                    break;
+                case "bortko":
+                    myMap.geoObjects.add(bortko);
+                    break;
+                case "todorovski":
+                    myMap.geoObjects.add(todorovski);
+                    break;
+                case "balabanov":
+                    myMap.geoObjects.add(balabanov);
+                    break;
+                case "sidorov":
+                    myMap.geoObjects.add(sidorov);
+                    break;
+                case "bondarchuk":
+                    myMap.geoObjects.add(bondarchuk);
+                    break;
+                case "lokshin":
+                    myMap.geoObjects.add(lokshin);
+                    break;
+                case "trofim":
+                    myMap.geoObjects.add(trofim);
+                    break;
 
+                default:
+            } 
+            /*if(varName1 === "kalatozov"){
+                myMap.geoObjects.add(kalatozov);}
+
+            if(varName1 === "trofim"){
+                myMap.geoObjects.add(trofim);}*/
             //myMap.geoObjects.add(kalatozov);
             //myMap.geoObjects.add(danelia);
             // myMap.geoObjects.add(zarhi);
