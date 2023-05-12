@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Карта Яндекс</title>
+    <style type="text/css">
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a4099e75-110e-4f4d-93d2-3b0fac65b014&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 10
+            });
+
+            var kalatozov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, площадь Тверская Застава, 7",
+                    "Москва, Смоленская-Сенная площадь, 27с1",
+                    "Москва, Крымский мост",
+                    "Москва, Болотная площадь",
+                    "Москва, Красная площадь",
+                    "Москва, Армянский переулок, 4"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var danelia = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, Чистопрудный бульвар",
+                    "Москва, Красная площадь",
+                    "Кутузовский просп., 38, стр. 1, Москва",
+                    "Москва, Ленинский проспект, 34/1",
+                    "Москва, метро Университет"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var zarhi = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "просп. Шаумяна, 22, Санкт-Петербург",
+                    "Невский просп., 85, Санкт-Петербург",
+                    "площадь Искусств, 1, Санкт-Петербург",
+                    "Санкт-Петербург, Малая Морская улица",
+                    "Санкт-Петербург, Конногвардейский бульвар",
+                    "наб. реки Крестовки, 10, Санкт-Петербург"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var gaidai = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, улица Академика Королёва, 12, подъезд 17",
+                    "Москва, улица Новый Арбат",
+                    "Москва, набережная Тараса Шевченко",
+                    "Москва, Комсомольский проспект, 5/2",
+                    "Москва, Университетский проспект, 12",
+                    "Москва, улица Вавилова, 28",
+                    "Москва, Ленинский проспект, 78"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var ryazanov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, 1-й Краснокурсантский проезд",
+                    "Москва, переулок Чернышевского, 4с1",
+                    "Москва, Большой Гнездниковский переулок, 10",
+                    "Москва, Тверская улица, 9",
+                    "Москва, Большая Никитская улица, 43",
+                    "Москва, улица Шверника",
+                    "Москва, проспект Вернадского, 125",
+                    "Москва, Чертановская улица, 47"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var seryi = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, Красная площадь",
+                    "Театральный пр., 5, стр. 1, Центральный административный округ, Тверской район, Москва",
+                    "Старопименовский пер., 16, Москва",
+                    "Москва, Смоленская набережная",
+                    "Москва, Бородинский мост",
+                    "Москва, проспект Вернадского, 49",
+                    "Москва, улица Удальцова, 3к13"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var menshov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Беговая ул., 34, Москва",
+                    "Москва, Кольцевая линия, метро Новослободская",
+                    "Москва, Триумфальная площадь",
+                    "Кудринская площадь, 1, Москва",
+                    "Москва, улица Охотный Ряд",
+                    "Москва, Гоголевский бульвар",
+                    "Москва, улица Фотиевой, 6"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var kozakov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, улица Казакова, 15",
+                    "Москва, улица Земляной Вал, 53с1",
+                    "Москва, Чистопрудный бульвар",
+                    "Москва, Патриаршие пруды",
+                    "Москва, Нащокинский переулок, 10"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var shahnazarov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, Сретенский бульвар",
+                    "Москва, Ростовская набережная, 5",
+                    "Москва, 7-й Ростовский переулок, 11",
+                    "Москва, улица Довженко, 6",
+                    "Москва, природный заказник Воробьёвы горы",
+                    "Москва, улица Раменки"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var bortko = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Санкт-Петербург, Дегтярный переулок",
+                    "Санкт-Петербург, Преображенская площадь",
+                    "Санкт-Петербург, Моховая улица, 27-29",
+                    "Санкт-Петербург, Боровая улица, 3"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var todorovski = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Санкт-Петербург, улица Дыбенко, 22к1",
+                    "Санкт-Петербург, Искровский проспект, 17к1",
+                    "Санкт-Петербург, Дальневосточный проспект, 26В",
+                    "Санкт-Петербург, Дегтярная улица",
+                    "Санкт-Петербург, Центральный район, Михайловская улица, 1/7",
+                    "Санкт-Петербург, Троицкий мост",
+                    "Санкт-Петербург, набережная Лейтенанта Шмидта",
+                    "Санкт-Петербург, 25-я линия Васильевского острова, 8",
+                    "Санкт-Петербург, набережная реки Фонтанки"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var balabanov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Санкт-Петербург, улица Рентгена",
+                    "Санкт-Петербург, набережная Зимней канавки",
+                    "наб. реки Мойки, 12, Санкт-Петербург",
+                    "Санкт-Петербург, Сенатская площадь",
+                    "Исаакиевская площадь, 4, Санкт-Петербург",
+                    "Санкт-Петербург, набережная канала Грибоедова",
+                    "Загородный просп., 52, Санкт-Петербург",
+                    "Санкт-Петербург, улица Марата, 72",
+                    "Санкт-Петербург, Аничков мост"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var sidorov = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, Новослободская улица, 45с5",
+                    "Москва, Кутузовский проспект, 2/1с6",
+                    "Москва, улица Новый Арбат, 29",
+                    "Москва, Большая Никитская улица, 13/6",
+                    "Москва, Котельническая набережная, 1/15кБ"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var bondarchuk = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Москва, Озерковская набережная, 22/24",
+                    "Москва, Фрунзенская набережная, 22/2",
+                    "Москва, Южный административный округ, район Чертаново Северное, микрорайон Северное Чертаново, 4к406",
+                    "1А, Южный административный округ, район Чертаново Северное, микрорайон Северное Чертаново, Москва"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var lokshin = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Миллионная ул., 5А, Санкт-Петербург",
+                    "Санкт-Петербург, Певческий мост",
+                    "Университетская наб., 17, Санкт-Петербург",
+                    "наб. реки Фонтанки, 101, Санкт-Петербург"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+            var trofim = new ymaps.multiRouter.MultiRoute({
+                referencePoints: [
+                    "Санкт-Петербург, улица Рубинштейна, 26",
+                    "Санкт-Петербург, Невский проспект, 62",
+                    "Санкт-Петербург, улица Радищева",
+                    "Санкт-Петербург, Соляной переулок",
+                    "Санкт-Петербург, набережная Зимней канавки",
+                    "Санкт-Петербург, Благовещенский мост"
+                ],
+                params: {
+                    routingMode: "pedestrian"
+                }
+            }, {
+                boundsAutoApply: true
+            });
+
+
+            //myMap.geoObjects.add(kalatozov);
+            //myMap.geoObjects.add(danelia);
+            // myMap.geoObjects.add(zarhi);
+            //myMap.geoObjects.add(gaidai);
+            //myMap.geoObjects.add(ryazanov);
+            //myMap.geoObjects.add(seryi);
+            //myMap.geoObjects.add(menshov);
+            //myMap.geoObjects.add(kozakov);
+            //myMap.geoObjects.add(shahnazarov);
+            // myMap.geoObjects.add(bortko);
+            // myMap.geoObjects.add(todorovski);
+            // myMap.geoObjects.add(balabanov);
+            //myMap.geoObjects.add(sidorov);
+            //myMap.geoObjects.add(bondarchuk);
+            // myMap.geoObjects.add(lokshin);
+            // myMap.geoObjects.add(trofim);
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>
