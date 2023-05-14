@@ -2,13 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Карта Яндекс</title>
-    <style type="text/css">
-        #map {
-            width: 100%;
-            height: 500px;
-        }
-    </style>
+    <title>KINOGO</title>
+    <link rel="stylesheet" href="allmaps.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a4099e75-110e-4f4d-93d2-3b0fac65b014&lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
         ymaps.ready(function () {
@@ -81,14 +76,13 @@
 
                 default:
             } 
-
-            //myMap.geoObjects.add(msc);
-            //myMap.geoObjects.add(spb);
-            
         });
     </script>
 </head>
 <body>
+    <header>
+        <a href="choose.html"><h4>KINOGO</h4></a>
+    </header>
     <div id="map"></div>
 </body>
 </html>

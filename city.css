@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #fff;
+    background: #333;
 } 
 
 header h4{
@@ -18,7 +18,7 @@ header h4{
     top: 2.5%;
     bottom: 1rem;
     font-size: 1.2rem;
-    color: #212121;
+    color: #fff;
     z-index: 2;
 }
 
